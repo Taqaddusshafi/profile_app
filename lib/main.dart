@@ -1,5 +1,18 @@
 import 'package:flutter/material.dart';
-//import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+final Uri _url = Uri.parse('https://github.com/Taqaddusshafi'); //git
+final Uri _url1 = Uri.parse(
+    'https://www.linkedin.com/in/taqaddus-shafi-36b2701b5'); //linkedin
+final Uri _url2 = Uri.parse(
+    'https://play.google.com/store/apps/details?id=com.taqaddus.secure'); //firstproject
+final Uri _url3 = Uri.parse('https://github.com/Taqaddusshafi/profile_app');
+final Uri _url4 = Uri.parse('https://github.com/Taqaddusshafi/userstatsapp');
+final Uri _url5 =
+    Uri.parse('https://github.com/Taqaddusshafi/fitness_comiunity_app');
+final Uri _url7 = Uri.parse('https://www.instagram.com/taqaddusshafi/');
+final Uri _url6 = Uri.parse('https://www.facebook.com/taqaddus.shafi.3/');
+final Uri _url8 = Uri.parse('https://twitter.com/TaqaddusShafi');
 
 void main() {
   runApp(const MyApp());
@@ -30,6 +43,60 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
+Future<void> _launchUrl() async {
+  if (!await launchUrl(_url)) {
+    throw Exception('Could not launch $_url');
+  }
+}
+
+Future<void> _launchUrl1() async {
+  if (!await launchUrl(_url1)) {
+    throw Exception('Could not launch $_url1');
+  }
+}
+
+Future<void> _launchUrl2() async {
+  if (!await launchUrl(_url2)) {
+    throw Exception('Could not launch $_url1');
+  }
+}
+
+Future<void> _launchUrl3() async {
+  if (!await launchUrl(_url3)) {
+    throw Exception('Could not launch $_url3');
+  }
+}
+
+Future<void> _launchUrl4() async {
+  if (!await launchUrl(_url4)) {
+    throw Exception('Could not launch $_url4');
+  }
+}
+
+Future<void> _launchUrl5() async {
+  if (!await launchUrl(_url5)) {
+    throw Exception('Could not launch $_url5');
+  }
+}
+
+Future<void> _launchUrl6() async {
+  if (!await launchUrl(_url6)) {
+    throw Exception('Could not launch $_url6');
+  }
+}
+
+Future<void> _launchUrl7() async {
+  if (!await launchUrl(_url7)) {
+    throw Exception('Could not launch $_url7');
+  }
+}
+
+Future<void> _launchUrl8() async {
+  if (!await launchUrl(_url8)) {
+    throw Exception('Could not launch $_url8');
+  }
+}
+
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
@@ -39,11 +106,12 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
 
         body: Container(
-            child: SingleChildScrollView(
-                // Center is a layout widget. It takes a single child and positions it
-                // in the middle of the parent.
-                child: Container(
-                    child: Column(
+            child: SafeArea(
+                child: SingleChildScrollView(
+                    // Center is a layout widget. It takes a single child and positions it
+                    // in the middle of the parent.
+                    child: Container(
+                        child: Column(
       children: <Widget>[
         Container(
             child: Column(
@@ -89,7 +157,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   icon: Image.asset('assets/images/git.png'),
                   iconSize: 40,
                   color: Colors.white,
-                  onPressed: () {},
+                  onPressed: () {
+                    _launchUrl();
+                  },
                 ),
               ),
               SizedBox(
@@ -100,7 +170,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   icon: Image.asset('assets/images/linkedin.png'),
                   iconSize: 40,
                   color: Colors.white,
-                  onPressed: () {},
+                  onPressed: () {
+                    _launchUrl1();
+                  },
                 ),
               ),
             ])),
@@ -235,8 +307,11 @@ class _MyHomePageState extends State<MyHomePage> {
         Container(
             margin: EdgeInsets.fromLTRB(10, 10, 0, 0),
             alignment: Alignment.topLeft,
-            child:
-                ElevatedButton(onPressed: () {}, child: Text("View Project"))),
+            child: ElevatedButton(
+                onPressed: () {
+                  _launchUrl2();
+                },
+                child: Text("View Project"))),
         Container(
             margin: EdgeInsets.fromLTRB(10, 10, 0, 0),
             alignment: Alignment.topLeft,
@@ -258,8 +333,11 @@ class _MyHomePageState extends State<MyHomePage> {
         Container(
             margin: EdgeInsets.fromLTRB(10, 10, 0, 0),
             alignment: Alignment.topLeft,
-            child:
-                ElevatedButton(onPressed: () {}, child: Text("View Project"))),
+            child: ElevatedButton(
+                onPressed: () {
+                  _launchUrl3();
+                },
+                child: Text("View Project"))),
         SizedBox(
           height: 10,
         ),
@@ -291,8 +369,11 @@ class _MyHomePageState extends State<MyHomePage> {
         Container(
             margin: EdgeInsets.fromLTRB(10, 10, 0, 0),
             alignment: Alignment.topLeft,
-            child:
-                ElevatedButton(onPressed: () {}, child: Text("View Project"))),
+            child: ElevatedButton(
+                onPressed: () {
+                  _launchUrl4();
+                },
+                child: Text("View Project"))),
         Container(
             margin: EdgeInsets.fromLTRB(10, 10, 0, 0),
             alignment: Alignment.topLeft,
@@ -323,8 +404,11 @@ class _MyHomePageState extends State<MyHomePage> {
         Container(
             margin: EdgeInsets.fromLTRB(10, 10, 0, 0),
             alignment: Alignment.topLeft,
-            child:
-                ElevatedButton(onPressed: () {}, child: Text("View Project"))),
+            child: ElevatedButton(
+                onPressed: () {
+                  _launchUrl5();
+                },
+                child: Text("View Project"))),
         SizedBox(
           height: 10,
         ),
@@ -545,7 +629,9 @@ class _MyHomePageState extends State<MyHomePage> {
                               icon: Image.asset('assets/images/facebook.png'),
                               iconSize: 40,
                               color: Colors.white,
-                              onPressed: () {},
+                              onPressed: () {
+                                _launchUrl6();
+                              },
                             ),
                           ),
                           Container(
@@ -553,7 +639,9 @@ class _MyHomePageState extends State<MyHomePage> {
                               icon: Image.asset('assets/images/instagram.png'),
                               iconSize: 40,
                               color: Colors.white,
-                              onPressed: () {},
+                              onPressed: () {
+                                _launchUrl7();
+                              },
                             ),
                           ),
                           Container(
@@ -561,13 +649,15 @@ class _MyHomePageState extends State<MyHomePage> {
                               icon: Image.asset('assets/images/twitter.png'),
                               iconSize: 40,
                               color: Colors.white,
-                              onPressed: () {},
+                              onPressed: () {
+                                _launchUrl8();
+                              },
                             ),
                           ),
                         ])),
               ],
             )),
       ],
-    )))));
+    ))))));
   }
 }
