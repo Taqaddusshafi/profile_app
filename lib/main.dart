@@ -44,55 +44,55 @@ class MyHomePage extends StatefulWidget {
 }
 
 Future<void> _launchUrl() async {
-  if (!await launchUrl(_url)) {
+  if (!await launchUrl(_url, mode: LaunchMode.externalApplication)) {
     throw Exception('Could not launch $_url');
   }
 }
 
 Future<void> _launchUrl1() async {
-  if (!await launchUrl(_url1)) {
+  if (!await launchUrl(_url1, mode: LaunchMode.externalApplication)) {
     throw Exception('Could not launch $_url1');
   }
 }
 
 Future<void> _launchUrl2() async {
-  if (!await launchUrl(_url2)) {
+  if (!await launchUrl(_url2, mode: LaunchMode.externalApplication)) {
     throw Exception('Could not launch $_url1');
   }
 }
 
 Future<void> _launchUrl3() async {
-  if (!await launchUrl(_url3)) {
+  if (!await launchUrl(_url3, mode: LaunchMode.externalApplication)) {
     throw Exception('Could not launch $_url3');
   }
 }
 
 Future<void> _launchUrl4() async {
-  if (!await launchUrl(_url4)) {
+  if (!await launchUrl(_url4, mode: LaunchMode.externalApplication)) {
     throw Exception('Could not launch $_url4');
   }
 }
 
 Future<void> _launchUrl5() async {
-  if (!await launchUrl(_url5)) {
+  if (!await launchUrl(_url5, mode: LaunchMode.externalApplication)) {
     throw Exception('Could not launch $_url5');
   }
 }
 
 Future<void> _launchUrl6() async {
-  if (!await launchUrl(_url6)) {
+  if (!await launchUrl(_url6, mode: LaunchMode.externalApplication)) {
     throw Exception('Could not launch $_url6');
   }
 }
 
 Future<void> _launchUrl7() async {
-  if (!await launchUrl(_url7)) {
+  if (!await launchUrl(_url7, mode: LaunchMode.externalApplication)) {
     throw Exception('Could not launch $_url7');
   }
 }
 
 Future<void> _launchUrl8() async {
-  if (!await launchUrl(_url8)) {
+  if (!await launchUrl(_url8, mode: LaunchMode.externalApplication)) {
     throw Exception('Could not launch $_url8');
   }
 }
@@ -208,7 +208,7 @@ class _MyHomePageState extends State<MyHomePage> {
             margin: EdgeInsets.fromLTRB(10, 10, 0, 0),
             alignment: Alignment.topLeft,
             child: Text(
-              "Cgpa: 7.64 till 5th semester",
+              "Cgpa: 7.74 till 5th semester",
               style: TextStyle(
                 fontSize: 12,
               ),
